@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from flask_frozen import Freezer
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
 db = SQLAlchemy(app)
+freezer = Freezer(app)
 
 class BlogPost(db.Model):
     id = db.Column(db.Integer, primary_key=True)
