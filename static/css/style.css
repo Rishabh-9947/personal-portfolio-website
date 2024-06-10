@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../images/hero-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Header and Navigation */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background for better visibility */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff6f61;
+}
+
+/* Content Section */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.content {
+    max-width: 800px;
+    margin: 60px auto 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+}
+
+/* Option 1: Custom Scrollbar */
+.content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: rgba(255, 111, 97, 0.8);
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 111, 97, 1);
+}
+
+/* Option 2: Hide Scrollbar */
+/* Uncomment these lines if you prefer to hide the scrollbar */
+/*
+.content {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.content::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+*/
+
+.content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content section {
+    margin-bottom: 20px;
+}
+
+.content section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.content section p,
+.content section ul {
+    line-height: 1.6;
+}
+
+.content section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content section ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Matching the header background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

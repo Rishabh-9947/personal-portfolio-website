@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Personal Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .content {
+            max-width: 800px;
+            margin: 100px auto 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+
+        .content h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content form input,
+        .content form textarea,
+        .content form button {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .content form input,
+        .content form textarea {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+
+        .content form button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .content form button:hover {
+            background-color: #e65b54;
+        }
+
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px); /* For Safari */
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .content ul li:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .content ul li a {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .content ul li p {
+            margin: 5px 0 0;
+            color: #ccc;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('projects') }}">Projects</a>
+            <a href="{{ url_for('resume') }}">Resume</a>
+            <a href="{{ url_for('blog') }}">Blog</a>
+        </nav>
+    </header>
+    <div class="content">
+        <h1>Blog</h1>
+        <form method="POST">
+            <input type="text" name="title" placeholder="Title" required>
+            <textarea name="content" placeholder="Content" rows="5" required></textarea>
+            <button type="submit">Add Post</button>
+        </form>
+        <ul>
+            {% for post in posts %}
+            <li>
+                <a href="{{ url_for('post', id=post.id) }}">{{ post.title }}</a>
+                <p>{{ post.date_posted.strftime('%B %d, %Y') }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+</body>
+</html>

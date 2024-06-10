@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Rishabh Sharma</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .content-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 60px auto 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+            overflow-y: auto;
+            max-height: calc(100vh - 120px);
+        }
+
+        .content h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content section {
+            margin-bottom: 20px;
+        }
+
+        .content section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .content section p,
+        .content section ul {
+            line-height: 1.6;
+        }
+
+        .content section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content section ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('projects') }}">Projects</a>
+            <a href="{{ url_for('resume') }}">Resume</a>
+            <a href="{{ url_for('blog') }}">Blog</a>
+        </nav>
+    </header>
+    <div class="content-container">
+        <div class="content">
+            <h1>About Me</h1>
+            <section>
+                <h2>Who Am I?</h2>
+                <p><strong>Hey there! I'm Rishabh Sharma</strong></p>
+                <p>Email: <a href="mailto:rishabhsharma1600@gmail.com">rishabhsharma1600@gmail.com</a></p>
+                <p>Phone: <a href="tel:+917230814821">+91 7230814821</a></p>
+                <p>Location: Jaipur, India</p>
+                <p>GitHub: <a href="https://github.com/Rishabh-9947">github.com/Rishabh-9947</a></p>
+                <p>Twitter: <a href="https://twitter.com/mrkermit265">twitter.com/mrkermit265</a></p>
+            </section>
+
+            <section>
+                <h2>My Journey</h2>
+                <p>I'm a tech enthusiast with a knack for Python and JavaScript. My journey began with curiosity and has evolved into a passion for solving complex problems and building innovative projects. Currently, I'm pursuing a diploma in computer programming and aiming to land a job in Japan. I believe in continuous learning and pushing my limits to grow both personally and professionally.</p>
+            </section>
+
+            <section>
+                <h2>What Drives Me?</h2>
+                <p>I thrive on challenges and the thrill of creating something new. My interests span from reading historical and psychological literature to exploring ancient wisdom and modern technologies. "Meditations" by Marcus Aurelius has profoundly influenced my perspective on life and personal growth.</p>
+            </section>
+
+            <section>
+                <h2>Beyond Coding</h2>
+                <p>When I'm not coding, you can find me delving into books about history, enjoying documentaries, or planning my next adventure. I'm passionate about fitness and am on a journey to achieve a toned physique. One of my dreams is to ride my first bike, a Triumph Speed Twin 900, across the scenic routes of Japan.</p>
+            </section>
+
+            <section>
+                <h2>Let's Connect</h2>
+                <p>If you're interested in collaborating on a project, sharing ideas, or just having a chat about tech, history, or travel, feel free to reach out. I'm always excited to meet like-minded individuals and explore new opportunities.</p>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Rishabh Sharma</p>
+    </footer>
+</body>
+</html>

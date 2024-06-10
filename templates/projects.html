@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Personal Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .projects-container {
+            max-width: 1200px;
+            margin: 100px auto 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+
+        .projects-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .projects-container ul {
+            list-style-type: none;
+            padding: 0;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        .projects-container ul li {
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .projects-container ul li:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .projects-container ul li a {
+            color: #ff6f61;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+
+        .projects-container ul li p {
+            margin: 5px 0 0;
+            color: #ccc;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('projects') }}">Projects</a>
+            <a href="{{ url_for('resume') }}">Resume</a>
+            <a href="{{ url_for('blog') }}">Blog</a>
+        </nav>
+    </header>
+    <div class="projects-container">
+        <h1>My Projects</h1>
+        <ul>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Task-Automation">Task-Automation</a></h2>
+                    <p>Automates repetitive tasks with Python.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Rishabh-9947">Rishabh-9947</a></h2>
+                    <p>General repository.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Weather-App-GUI">Weather-App-GUI</a></h2>
+                    <p>A GUI weather application in Python.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Grocery-Store-Application">Grocery-Store-Application</a></h2>
+                    <p>Multi-user web application for grocery shopping.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Predictive-Modeling">Predictive-Modeling</a></h2>
+                    <p>Predictive model for bank client subscription.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Number-to-Words-Converter">Number-to-Words-Converter</a></h2>
+                    <p>Converts numerical input to word representation.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/GUI-Alarm-Clock">GUI-Alarm-Clock</a></h2>
+                    <p>Python alarm clock with a GUI.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Customer-Churn-Prediction">Customer-Churn-Prediction</a></h2>
+                    <p>Predicts customer churn for bank accounts.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Binary-Search-Algorithm">Binary-Search-Algorithm</a></h2>
+                    <p>Implementation of binary search in Python.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Website-Blocker">Website-Blocker</a></h2>
+                    <p>Python script to block specified websites.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/GIF-Creator">GIF-Creator</a></h2>
+                    <p>Generates GIFs from images or video clips.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Snake-Game">Snake-Game</a></h2>
+                    <p>Classic snake game in Python using Pygame.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Image-to-Sound">Image-to-Sound</a></h2>
+                    <p>Converts images to sound.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Google_Image_Downloader">Google_Image_Downloader</a></h2>
+                    <p>Python script for automating image downloads.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Dice-Rolling-Simulator">Dice-Rolling-Simulator</a></h2>
+                    <p>Simulates dice rolling.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Monty-Hall-Simulation-Problem">Monty-Hall-Simulation-Problem</a></h2>
+                    <p>Monty Hall problem simulation.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Contact-List">Contact-List</a></h2>
+                    <p>Python-based contact list management.</p>
+                </div>
+            </li>
+            <li>
+                <div class="project-description">
+                    <h2><a href="https://github.com/Rishabh-9947/Email-Slicer">Email-Slicer</a></h2>
+                    <p>Splits email into username and domain.</p>
+                </div>
+            </li>
+        </ul>
+        <p>For more details, you can visit my <a href="https://github.com/Rishabh-9947?tab=repositories" style="color: #ff6f61;">GitHub repositories page</a>.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Rishabh Sharma</p>
+    </footer>
+</body>
+</html>
